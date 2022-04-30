@@ -1,0 +1,66 @@
+@api = http://localhost:3001/api
+
+//------------Projects--------------------
+### Get Projects
+GET {{api}}/projects
+
+### GET Projects BY ID
+GET http://localhost:3001/api/projects/2
+
+### POST Projects
+POST http://localhost:3001/api/projects
+Content-Type: application/json
+
+{
+    "name": "project 1",
+    "priority": 10,
+    "description": "todo bien"
+}
+
+### DELETE Projects
+DELETE http://localhost:3001/api/projects/1
+
+### PUT Projects
+PUT http://localhost:3001/api/projects/2
+Content-Type: application/json
+
+{
+    "name": "project 1",
+    "priority": 50,
+    "description": "updetiado papa"
+}
+### GET all tasks from a project
+GET http://localhost:3001/api/projects/2/tasks
+
+
+
+//------------Tasks--------------------
+### Get Tasks
+GET {{api}}/tasks
+
+### GET Task BY ID
+GET http://localhost:3001/api/tasks/2
+
+### POST Task
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{
+    "name": "another",
+    "done": false,
+    "projectId": 2
+}
+// por defecto el done es false , asi que no hace falta
+
+### DELETE Task
+DELETE http://localhost:3001/api/tasks/1
+
+### PUT Task
+PUT http://localhost:3001/api/tasks/2
+Content-Type: application/json
+
+{
+    "name": "terminar coin traker",
+    "done": true,
+    "projectId": 2
+}
